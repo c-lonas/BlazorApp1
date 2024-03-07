@@ -1,0 +1,28 @@
+﻿@rendermode InteractiveServer
+
+<div class=" fixed top-0 w-full h-10 bg-neutral-900 opacity-80 flex items-center justify-between px-16">
+
+	<button @onclick="IncrementGreenCount" class=" bg-green-500 h-6 w-6 rounded-full">
+		@greenCount
+	</button>
+
+	<button @onclick="IncrementRedCount" class=" bg-red-500 h-6 w-6 rounded-full">
+		@redCount
+	</button>
+</div>
+
+@code {
+	private int greenCount = 0;
+	private int redCount = 0;
+
+	private void IncrementGreenCount()
+	{
+		greenCount++;
+	}
+
+	private void IncrementRedCount()
+	{
+		redCount++;
+	}
+
+}
